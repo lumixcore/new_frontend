@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "LumixCore",
-  description: "Lumixcore is a Jexactyl based hosting platform. Upload your code and run apps 24/7.",
+  description: "Lumixcore is a Jexactyl based hosting project. Upload your code and run apps 24/7.",
 };
 
 export default function RootLayout({ children }) {
