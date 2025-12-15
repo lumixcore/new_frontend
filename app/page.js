@@ -46,6 +46,8 @@ export default function Home() {
   const images = [
     '/images/slide1.png',
     '/images/slide2.png',
+    '/images/slide3.png',
+    '/images/slide4.png',
   ];
 
   return (
