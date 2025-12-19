@@ -68,6 +68,18 @@ export default function Home() {
       {/* PAGE CONTENT */}
       <div>
 
+        <div 
+          className="absolute inset-0"
+          style={{ 
+            backgroundImage: 'url(/images/back.png)',
+            // backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            // backgroundRepeat: 'no-repeat',
+            // backgroundAttachment: 'fixed',
+            willChange: 'transform'
+          }}
+        />
+
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <ColorBends
             colors={["#6A2CB8", "#C33A50", "#00907E"]}
