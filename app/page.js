@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <ClickSpark sparkColor='#b1afb7' sparkSize={10} sparkRadius={17} sparkCount={6} duration={400}>
 
-    <div className="min-h-screen bg-[#19242e] text-[#E1DEE7]">
+    <div className="min-h-screen bg-[#000d1a] text-[#E1DEE7]">
       {/* NAVBAR */}
       <CardNav
         logo="/images/logo.png"
@@ -68,7 +68,7 @@ export default function Home() {
       {/* PAGE CONTENT */}
       <div>
 
-        <div 
+        {/* <div 
           className="absolute inset-0"
           style={{ 
             backgroundImage: 'url(/images/back.png)',
@@ -78,7 +78,7 @@ export default function Home() {
             // backgroundAttachment: 'fixed',
             willChange: 'transform'
           }}
-        />
+        /> */}
 
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <ColorBends
@@ -98,20 +98,18 @@ export default function Home() {
 
         {/* Content Layer */}
         <div className="relative z-10 min-h-screen flex flex-col xl:flex-row items-center justify-center p-6 gap-6 text-center">       
-          <div className="flex-1 flex flex-col items-center justify-center text-center gap-6 mt-[90px]">
-            <h1 className="font-extrabold text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl
+          <div className="flex-1 flex flex-col items-start justify-center text-left gap-6 mt-[90px] max-w-4xl mb-6 sm:mb-6 xl:mb-0">
+            <h1 className="font-extrabold text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl
                bg-linear-to-r from-[#98ffff] to-[#b66dff]
                bg-clip-text text-transparent">
-              Build & Host
+              Simplest way to host code.
             </h1>
 
             <p className="text-[#d4d2e0] text-base sm:text-lg leading-relaxed max-w-3xl">
-              LumixCore, a Jexactyl based hosting project built for developers. Upload your codebase, click run, 
-              and your application stays online 24/7. With fast performance, stable infrastructure, 
-              and an easy-to-use panel designed for both beginners and advanced users.
+              LumixCore, a Jexactyl based hosting project built for developers. Upload your codebase, click run, and your application stays online forever. With fast performance, stable infrastructure, and an easy-to-use panel designed for everyone.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 w-full">
+            <div className="flex flex-wrap justify-start gap-4 w-full">
               <button onClick={() => window.open("https://panel.lumixcore.com", "_blank", "noopener,noreferrer")}
                 className="px-6 py-3 rounded-full w-full sm:w-auto sm:min-w-[180px] flex items-center justify-center gap-3 bg-green-500/30 backdrop-blur-sm border border-green-500 text-white font-semibold shadow-lg hover:bg-green-500/50 hover:border-green-400 cursor-pointer transition-all duration-300 ease-in-out">
                 <FontAwesomeIcon icon={faRocket} className="text-lg sm:text-xl md:text-2xl max-w-6" /> Open Panel
