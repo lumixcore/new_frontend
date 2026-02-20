@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2804720115610064"
      crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Copperplate+Gothic:wght@400&display=swap" rel="stylesheet" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
