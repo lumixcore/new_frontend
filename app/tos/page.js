@@ -71,7 +71,7 @@ export default function TOS() {
         </p>
 
 
-        <h2>6. Payments & Refund Policy</h2>
+        <h2 id="refund-policy">6. Payments & Refund Policy</h2>
         <p>We currently accept payments in cryptocurrency, including USDT via the TRON (TRC20) network.
           All payments are final. No refunds will be provided for any reason and users are responsible 
           for sending payments to the correct address.</p>
