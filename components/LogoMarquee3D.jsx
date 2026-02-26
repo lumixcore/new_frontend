@@ -36,7 +36,7 @@ const LogoCard = ({
   name,
 }) => {
   return (
-    <figure className="relative h-32 w-32 cursor-pointer overflow-hidden rounded-xl border border-gray-800/50 bg-[#0d1433a2] p-3">
+    <figure className="relative h-32 w-32 cursor-pointer overflow-hidden rounded-xl p-3">
       <img className="opacity-100 transition-all duration-300" alt={name} src={url}
         onError={(e) => {
           e.target.src = `https://via.placeholder.com/64x64/1a1a2e/ffffff?text=${name.charAt(0)}`;
