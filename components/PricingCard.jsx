@@ -1,7 +1,7 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiamond } from '@fortawesome/free-solid-svg-icons';
+import { faBolt, faSeedling, faCube, faLayerGroup, faGem, faCrown, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 const PricingCard = ({ 
   planName, 
@@ -10,28 +10,48 @@ const PricingCard = ({
   features, 
   extraClasses = "" 
 }) => {
+  const planIcon = (() => {
+    switch ((planName || '').toLowerCase()) {
+      case 'free':
+        return faSeedling;
+      case 'micro':
+        return faBolt;
+      case 'small':
+        return faCube;
+      case 'medium':
+        return faLayerGroup;
+      case 'large':
+        return faGem;
+      case 'xl':
+        return faCrown;
+      case '2xl':
+        return faRocket;
+      default:
+        return faCube;
+    }
+  })();
+
   return (
-    <div className={`border border-purple-800/10 rounded-[30px] p-6 relative overflow-hidden min-h-[500px] ${extraClasses}`}
+    <div className={`rounded-[30px] p-6 relative overflow-hidden min-h-[450px] ${extraClasses}`}
       style={{
         background: 'radial-gradient(circle at top left, #1e0a3a 0%, transparent 40%), radial-gradient(circle at bottom right, #1e0a3a 0%, transparent 40%), #000'
       }}>
-      <div className="absolute top-4 right-4 text-purple-400">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.75L17.25 7.75L17.25 13.25L12 16.25L6.75 13.25L6.75 7.75L12 4.75Z"/>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 17.25L17.25 20.25L17.25 20.25L12 23.25L6.75 20.25L6.75 20.25L12 17.25Z"/>
-        </svg>
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-xl text-white">{planName}</h3>
+        <div className="h-10 w-10 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center">
+          <FontAwesomeIcon icon={planIcon} className="text-purple-300 text-lg" />
+        </div>
       </div>
-      <h3 className="text-xl text-white mb-2">{planName}</h3>
-      <div className="text-5xl text-purple-400 font-bold mb-3">
+      <div className="text-4xl text-purple-300 mb-3">
         {originalPrice && <><s className="text-gray-500 text-3xl">{originalPrice}</s><br /></>} ${price}
         <span className="text-lg text-gray-400">/month</span>
       </div>
-      <hr className="border-0 h-0.5 mb-6 bg-linear-to-r from-transparent via-purple-500/40 to-transparent" />
+      <hr className="border-0 h-0.5 bg-linear-to-r from-transparent via-purple-500/40 to-transparent" />
       <br />
       <ul className="text-gray-300 space-y-2 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <FontAwesomeIcon icon={faDiamond} className="text-purple-400 mr-2 text-[8px]" />
+            <span className="text-purple-300 mr-3 text-[10px]">•</span>
             {feature}
           </li>
         ))}
@@ -53,7 +73,6 @@ const PricingCard = ({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
-      <p className="text-center text-gray-500 text-sm mt-4">No extra hidden charge</p>
     </div>
   );
 };
