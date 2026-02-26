@@ -1,5 +1,20 @@
 import styles from "./tos.module.css"
 
+export const metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for Lumixcore.',
+  alternates: {
+    canonical: '/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy — Lumixcore',
+    description: 'Privacy Policy for Lumixcore.',
+    url: '/privacy',
+    images: [{ url: '/images/back.png' }],
+    type: 'website',
+  },
+};
+
 export default function TOS() {
   return (
     <main className={styles.page}>
