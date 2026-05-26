@@ -17,7 +17,6 @@ export const metadata = {
   metadataBase: new URL('https://lumixcore.com'),
   title: {
     default: 'Lumixcore',
-    template: '%s — Lumixcore',
   },
   description: 'Simple, fast hosting for apps, bots, and projects. Deploy without the hassle.',
   keywords: ['hosting', 'apps', 'bots', 'deploy', 'cloud', 'server', 'lumixcore'],

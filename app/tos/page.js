@@ -1,16 +1,15 @@
 import styles from "./tos.module.css"
 
 export const metadata = {
-  title: 'Terms of Service',
+  title: 'Terms of Service - Lumixcore',
   description: 'Terms of Service for Lumixcore.',
   alternates: {
     canonical: '/tos',
   },
   openGraph: {
-    title: 'Terms of Service — Lumixcore',
+    title: 'Terms of Service - Lumixcore',
     description: 'Terms of Service for Lumixcore.',
     url: '/tos',
-    images: [{ url: '/images/back.png' }],
     type: 'website',
   },
 };

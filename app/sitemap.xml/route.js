@@ -9,20 +9,60 @@ export async function GET() {
   // Get all blog posts
   const blogs = getAllBlogs();
   
-  // Static pages
+  // Static pages with optimized SEO priorities
   const staticPages = [
+    // Homepage - highest priority
     {
       url: baseUrl,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '1.0'
     },
+    // Product/Service pages - high priority
+    {
+      url: `${baseUrl}/containers`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: `${baseUrl}/gameserver`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: `${baseUrl}/kvmservers-us`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: `${baseUrl}/kvmservers-de`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: `${baseUrl}/kvmservers-ipv6-de`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    {
+      url: `${baseUrl}/webhosting`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: '0.9'
+    },
+    // Blog index - medium-high priority
     {
       url: `${baseUrl}/blogs`,
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: '0.8'
     },
+    // Legal pages - lower priority
     {
       url: `${baseUrl}/privacy`,
       lastmod: '2025-12-14',
