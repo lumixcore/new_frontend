@@ -7,8 +7,8 @@ import { CgWebsite } from "react-icons/cg";
 import { SiHackthebox } from "react-icons/si";
 import { FaNetworkWired } from "react-icons/fa6";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "@/custom/aos";
+import "@/custom/aos.css";
 
 const products = [
   {

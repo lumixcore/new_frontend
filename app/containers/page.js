@@ -2,8 +2,8 @@
 import '../../styles/fonts.css';
 import { useState, useEffect, useRef } from 'react';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "@/custom/aos";
+import "@/custom/aos.css";
 import CurvedDivider from '../../components/CurvedDivider';
 import ClickSpark from '../../components/ClickSpark';
 

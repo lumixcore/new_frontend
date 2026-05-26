@@ -2,8 +2,8 @@
 import '../styles/fonts.css';
 import {useEffect} from 'react';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "@/custom/aos";
+import "@/custom/aos.css";
 import ClickSpark from '../components/ClickSpark';
 
 import Navbar from '../components/Navbar';
