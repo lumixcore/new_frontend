@@ -1,11 +1,11 @@
 import { Marquee } from "@/components/ui/marquee"
 
 const techLogos = [
+  { name: "Rust", url: "https://eurorust.eu/2025/images/rust-logo.png" },
   { name: "React", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   { name: "Node.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
   { name: "Python", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "JavaScript", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "TypeScript", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "TypeScript", url: "https://raw.githubusercontent.com/gilbarbara/logos/42037415f0df19cd82b3853c18a967a81783f921/logos/typescript-icon.svg" },
   { name: "Vue.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
   { name: "Angular", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
   { name: "Next.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
@@ -17,13 +17,11 @@ const techLogos = [
   { name: "C++", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
   { name: "Java", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
   { name: "Go", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
-  { name: "Rust", url: "https://img.icons8.com/external-tal-revivo-filled-tal-revivo/1200/external-rust-is-a-multi-paradigm-system-programming-language-logo-filled-tal-revivo.jpg" },
   { name: "Flutter", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
   { name: "Minecraft", url: "https://cdn.worldvectorlogo.com/logos/minecraft-1.svg" },
-  { name: "Discord", url: "https://pngimg.com/d/discord_PNG3.png" },
-  { name: "Express", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-  { name: "Django", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-  { name: "FastAPI", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" }
+  { name: "Discord", url: "https://raw.githubusercontent.com/gilbarbara/logos/42037415f0df19cd82b3853c18a967a81783f921/logos/discord-icon.svg" },
+  { name: "Django", url: "https://raw.githubusercontent.com/gilbarbara/logos/42037415f0df19cd82b3853c18a967a81783f921/logos/django-icon.svg" },
+  { name: "FastAPI", url: "https://raw.githubusercontent.com/gilbarbara/logos/42037415f0df19cd82b3853c18a967a81783f921/logos/fastapi-icon.svg" }
 ]
 
 const firstRow = techLogos.slice(0, techLogos.length / 2)

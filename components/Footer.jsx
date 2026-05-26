@@ -55,46 +55,31 @@ const Footer = () => {
               <div>
                 <h4 className="text-sm font-semibold text-white">Information</h4>
                 <div className="mt-4 flex flex-col gap-3 text-sm">
-                  <Link
-                    href="/#features-section"
-                    onClick={(e) => {
-                      const el = document.getElementById('features-section');
-                      if (el) {
-                        e.preventDefault();
-                        el.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link className="text-gray-400 hover:text-white transition-colors" href="/#locations-section" onClick={(e) => {
+                      const el = document.getElementById('locations-section');
+                      const elementPosition = el.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - 80;
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }}>
+                    Our locations
+                  </Link>
+                  <Link className="text-gray-400 hover:text-white transition-colors" href="/#products-section" onClick={(e) => {
+                      const productsSection = document.getElementById('products-section');
+                      const elementPosition = productsSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - 80;
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }}>
+                    Products
+                  </Link>
+                  <Link className="text-gray-400 hover:text-white transition-colors" href="/#features-section" onClick={(e) => {
+                      const ell = document.getElementById('features-section');
+                      const elementPosition = ell.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - 80;
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }}>
                     Features
                   </Link>
-                  <Link
-                    href="/#faq-section"
-                    onClick={(e) => {
-                      const el = document.getElementById('faq-section');
-                      if (el) {
-                        e.preventDefault();
-                        el.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    FAQ
-                  </Link>
-                  <a href="https://stats.uptimerobot.com/9FsmJ19IdG" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
-                  <Link
-                    href="/#pricing-section"
-                    onClick={(e) => {
-                      const pricingSection = document.getElementById('pricing-section');
-                      if (pricingSection) {
-                        e.preventDefault();
-                        pricingSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </Link>
+                  <a href="https://status.lumixcore.com" className="text-gray-400 hover:text-white transition-colors">Status</a>
                 </div>
               </div>
 
@@ -109,10 +94,11 @@ const Footer = () => {
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-white">Support</h4>
+                <h4 className="text-sm font-semibold text-white">Contact</h4>
                 <div className="mt-4 flex flex-col gap-3 text-sm">
-                  <a href="mailto:hi@lumixcore.com" className="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-                  <a href="https://github.com/lumixcore" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
+                  <a href="mailto:hi@lumixcore.com" className="text-gray-400 hover:text-white transition-colors">Mail Us</a>
+                  <a href="https://panel.lumixcore.com/tickets" className="text-gray-400 hover:text-white transition-colors">Open a ticket</a>
+                  <a href="https://discord.gg/2h8hBx8A52" className="text-gray-400 hover:text-white transition-colors">Discord Community</a>
                 </div>
               </div>
             </div>
