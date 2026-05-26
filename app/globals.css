@@ -43,6 +43,8 @@
   --radius-xl: calc(var(--radius) + 4px);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  
+  
   @keyframes marquee {
   from {
     transform: translateX(0);
@@ -156,4 +158,67 @@
   .animate-scroll:hover {
     animation-play-state: paused;
   }
+}
+
+/* Custom scrollbar styles - must be outside @layer utilities */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #281c5a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #281c5a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000313;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #000313;
+}
+
+/* Firefox scrollbar styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #281c5a #000313;
+}
+
+
+
+
+
+
+
+
+.purple-glow-card {
+  position: relative;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(165deg,#09123499, #09123499,#16307399);
+  overflow: hidden;
+  /* border: 1px solid #3d1466; */
+}
+
+.purple-glow-card::before,
+.purple-glow-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #0000, #1e093200, #b56aff, #0000, #0000);
+}
+
+.purple-glow-card::before {
+  /* top: 0; */
+  display: none; 
+}
+
+.purple-glow-card::after {
+  bottom: 0;
 }
