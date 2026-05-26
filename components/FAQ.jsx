@@ -1,31 +1,37 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export function FAQItem({ question, answer, isOpen, onToggle }) {
+  
+  useEffect(() => {AOS.init();}, []);
   return (
-    <div className="border border-white/10 rounded-xl overflow-hidden bg-[#00051b]/40 backdrop-blur transition-all duration-300 cursor-pointer">
-      <button
-        onClick={onToggle}
-        className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 transition-colors duration-200 cursor-pointer"
-      >
-        <h3 className="text-white font-medium text-[18px] leading-relaxed">{question}</h3>
-        <div className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-          <svg className="w-5 h-5 text-cyan-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 9L12 16L5 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </button>
-      <div 
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="px-6 pb-4">
-          <p className="text-gray-400 text-[16px] leading-relaxed">{answer}</p>
+    <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="250" data-aos-offset="0">
+      <div className="border border-white/5 rounded-xl overflow-hidden bg-[#090d22] transition-all duration-300 hover:bg-[#0b1029] cursor-pointer">
+        <button
+          onClick={onToggle}
+          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 transition-colors duration-200 cursor-pointer"
+        >
+          <h3 className="text-white font-medium text-[18px] leading-relaxed">{question}</h3>
+          <div className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </button>
+        <div 
+          className={`transition-all duration-300 ease-in-out overflow-hidden ${
+            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-6 pb-4">
+            <p className="text-gray-400 text-[16px] leading-relaxed">{answer}</p>
+          </div>
         </div>
       </div>
-    </div>
+  </div>
   );
 }
 
