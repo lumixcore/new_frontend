@@ -69,7 +69,7 @@ export default function TOS() {
               excessive resource usage or instability is not allowed.</li>
           <li>Users are expected to use resources in a way appropriate for their plan size and intended purpose.
               Short resource spikes are allowed (such as during server startup, restarts, backups, or normal
-              network activity). Continuous high usage (averaging roughly 70% or more of allocated resources)
+              network activity). Continuous high usage (averaging roughly 90% or more of allocated resources)
               or using the service as a dedicated server is not allowed.</li>
           <li>Cryptocurrency mining or similar resource-intensive activities are strictly prohibited.</li>
           <li>Custom scripts, applications, or workloads intentionally designed to consume excessive resources are not allowed.</li>
@@ -87,9 +87,8 @@ export default function TOS() {
 
 
         <h2 id="refund-policy">6. Payments & Refund Policy</h2>
-        <p>We currently accept payments in cryptocurrency, including USDT via the TRON (TRC20) network.
-          All payments are final. No refunds will be provided for any reason and users are responsible 
-          for sending payments to the correct address.</p>
+        <p>We currently accept payments via PayPal, credit/debit cards, and cryptocurrency. All payments are generally final, 
+          but we may issue a refund in special cases, depending on the situation.</p>
 
         
         <h2>7. Suspension & Termination</h2>
