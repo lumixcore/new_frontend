@@ -28,7 +28,7 @@ const Navbar = () => {
   const mobileNavOptions = [
     { name: 'Home', link: '/#', delay: 0 },
     { name: 'Products', link: '#', isDropdown: true, delay: 100 },
-    { name: 'Locations', link: '#locations-section', needsOffset: true, delay: 200 },
+    { name: 'Locations', link: '/#locations-section', needsOffset: true, delay: 200 },
     { name: 'Blogs', link: '/blogs', delay: 300 },
   ];
 
