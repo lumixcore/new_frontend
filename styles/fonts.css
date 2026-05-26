@@ -1,0 +1,81 @@
+/* Nohemi Font Family - All Weights */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Thin-BF6438cc57e2011.woff2') format('woff2'),
+       url('/fonts/Nohemi-Thin-BF6438cc57e2011.woff') format('woff'),
+       url('/fonts/Nohemi-Thin-BF6438cc5896c67.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-ExtraLight-BF6438cc581502c.woff2') format('woff2'),
+       url('/fonts/Nohemi-ExtraLight-BF6438cc581502c.woff') format('woff'),
+       url('/fonts/Nohemi-ExtraLight-BF6438cc58a2634.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Light-BF6438cc5702321.woff2') format('woff2'),
+       url('/fonts/Nohemi-Light-BF6438cc5702321.woff') format('woff'),
+       url('/fonts/Nohemi-Light-BF6438cc5899919.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Regular-BF6438cc579d934.woff2') format('woff2'),
+       url('/fonts/Nohemi-Regular-BF6438cc579d934.woff') format('woff'),
+       url('/fonts/Nohemi-Regular-BF6438cc4d0e493.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Medium-BF6438cc57ddecd.woff2') format('woff2'),
+       url('/fonts/Nohemi-Medium-BF6438cc57ddecd.woff') format('woff'),
+       url('/fonts/Nohemi-Medium-BF6438cc5883899.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-SemiBold-BF6438cc57db2ff.woff2') format('woff2'),
+       url('/fonts/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('woff'),
+       url('/fonts/Nohemi-SemiBold-BF6438cc588a48a.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Bold-BF6438cc577b524.woff2') format('woff2'),
+       url('/fonts/Nohemi-Bold-BF6438cc577b524.woff') format('woff'),
+       url('/fonts/Nohemi-Bold-BF6438cc587b5b5.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-ExtraBold-BF6438cc5761ae2.woff2') format('woff2'),
+       url('/fonts/Nohemi-ExtraBold-BF6438cc5761ae2.woff') format('woff'),
+       url('/fonts/Nohemi-ExtraBold-BF6438cc5881baf.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Black-BF6438cc565e67b.woff2') format('woff2'),
+       url('/fonts/Nohemi-Black-BF6438cc565e67b.woff') format('woff'),
+       url('/fonts/Nohemi-Black-BF6438cc58744d4.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
