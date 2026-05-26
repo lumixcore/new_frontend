@@ -27,6 +27,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    keywords: [post.category, ...(post.title ? post.title.split(' ').slice(0,10) : [])],
     alternates: {
       canonical: `/blogs/${post.slug}`,
     },
@@ -46,6 +47,30 @@ export default async function BlogPostPage({ params }) {
 
   if (!post) notFound();
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `https://lumixcore.com/blogs/${post.slug}`
+    },
+    'headline': post.title,
+    'image': [
+      `https://lumixcore.com${post.coverImage}`
+    ],
+    'datePublished': post.publishedAt,
+    'author': {
+      '@type': 'Organization',
+      'name': 'Lumixcore'
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Lumixcore',
+      'logo': { '@type': 'ImageObject', 'url': 'https://lumixcore.com/favicon.ico' }
+    },
+    'description': post.content?.find(item => item.type === 'paragraph')?.text || ''
+  };
+
   const publishedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
@@ -55,6 +80,7 @@ export default async function BlogPostPage({ params }) {
   return (
     <>
       <Navbar />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <main className="min-h-screen bg-[#000313] pt-24">
         <article className="max-w-5xl mx-auto px-6">
           <div className="rounded-2xl backdrop-blur overflow-hidden">
