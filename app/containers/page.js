@@ -164,10 +164,10 @@ export default function ContainerPlans() {
     },
     {
       planName: "Cloud Container 3XL",
-      price: "8.5",
+      price: "7.5",
       currency: "$",
       features: [
-        { resource: "CPU", value: "225%" },
+        { resource: "CPU", value: "250%" },
         { resource: "RAM", value: "8GB" },
         { resource: "Storage", value: "16GB NVMe" },
         { resource: "Ports", value: "15 included" },

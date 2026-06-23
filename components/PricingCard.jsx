@@ -30,7 +30,7 @@ const PricingCard = ({
         ))}
       </div>
       <button className="w-full px-4 py-3 bg-[#0b1828] text-white rounded-full border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 flex items-center justify-center group"
-        onClick={() => window.location.href = 'https://panel.lumixcore.com/store/paid-servers'}>
+        onClick={() => window.location.href = 'https://panel.lumixcore.com/store/containers'}>
         Get plan
         <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
