@@ -13,7 +13,7 @@ const Footer = () => {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-[81rem] mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
@@ -51,10 +51,23 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+              <div>
+                <h4 className="text-sm font-semibold text-white">Products</h4>
+                <div className="mt-4 flex flex-col gap-3 text-sm">
+                  <a href="/containers" className="text-gray-400 hover:text-white transition-colors">Cloud Containers</a>
+                  <a href="/webhosting" className="text-gray-400 hover:text-white transition-colors">Web Hosting</a>
+                  <a href="/gameserver" className="text-gray-400 hover:text-white transition-colors">Game Hosting</a>
+                  <a href="/kvmservers-us" className="text-gray-400 hover:text-white transition-colors">KVM Servers (US)</a>
+                  <a href="/kvmservers-de" className="text-gray-400 hover:text-white transition-colors">KVM Servers (Germany)</a>
+                  <a href="/kvmservers-ipv6-de" className="text-gray-400 hover:text-white transition-colors">IPv6 KVM (Germany)</a>
+                </div>
+              </div>
+
               <div>
                 <h4 className="text-sm font-semibold text-white">Information</h4>
                 <div className="mt-4 flex flex-col gap-3 text-sm">
+                  <a href="/blogs" className="text-gray-400 hover:text-white transition-colors">Blog</a>
                   <Link className="text-gray-400 hover:text-white transition-colors" href="/#locations-section" onClick={(e) => {
                       const el = document.getElementById('locations-section');
                       const elementPosition = el.getBoundingClientRect().top;
@@ -62,14 +75,6 @@ const Footer = () => {
                       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                     }}>
                     Our locations
-                  </Link>
-                  <Link className="text-gray-400 hover:text-white transition-colors" href="/#products-section" onClick={(e) => {
-                      const productsSection = document.getElementById('products-section');
-                      const elementPosition = productsSection.getBoundingClientRect().top;
-                      const offsetPosition = elementPosition + window.pageYOffset - 80;
-                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    }}>
-                    Products
                   </Link>
                   <Link className="text-gray-400 hover:text-white transition-colors" href="/#features-section" onClick={(e) => {
                       const ell = document.getElementById('features-section');
