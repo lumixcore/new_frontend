@@ -50,7 +50,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Not included" },
-        { resource: "Snapshot", value: "1 included" }
+        { resource: "Snapshot", value: "1 included" },
+        { resource: "Bandwidth", value: "5TB" }
       ]
     },
     {
@@ -64,7 +65,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Self-serve" },
-        { resource: "Snapshot", value: "1 included" }
+        { resource: "Snapshot", value: "1 included" },
+        { resource: "Bandwidth", value: "6TB" }
       ]
     },
     {
@@ -78,7 +80,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Self-serve" },
-        { resource: "Snapshot", value: "1 included" }
+        { resource: "Snapshot", value: "1 included" },
+        { resource: "Bandwidth", value: "8TB" }
       ]
     },
     {
@@ -92,7 +95,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Self-serve" },
-        { resource: "Snapshot", value: "2 included" }
+        { resource: "Snapshot", value: "2 included" },
+        { resource: "Bandwidth", value: "8TB" }
       ]
     },
     {
@@ -106,7 +110,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Self-serve" },
-        { resource: "Snapshot", value: "3 included" }
+        { resource: "Snapshot", value: "3 included" },
+        { resource: "Bandwidth", value: "9TB" }
       ]
     },
     {
@@ -120,7 +125,8 @@ export default function KvmrootServerPlansUS() {
         { resource: "IPv4", value: "1 included" },
         { resource: "IPv6", value: "1x /64 included" },
         { resource: "Custom ISOs", value: "Self-serve" },
-        { resource: "Snapshot", value: "3 included" }
+        { resource: "Snapshot", value: "3 included" },
+        { resource: "Bandwidth", value: "10TB" }
       ]
     }
   ];
