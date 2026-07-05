@@ -1,6 +1,6 @@
-:HL["/_next/static/chunks/05gd1tf4l~6zk.css","style"]
+:HL["/_next/static/chunks/0w1uvrp3tuhqf.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.08e28id.o-okb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/chunks/0f_705yp-j~8s.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Copperplate+Gothic:wght@400&display=swap","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"kvmservers-de","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"qnxwMGWhgPhgbvIYGJYJS"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"kvmservers-de","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Xr2hLyH8UvityP_9BwkX3"}
