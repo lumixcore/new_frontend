@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { ReactLenis } from 'lenis/react';
+import Script from "next/script";
 import InitialLoader from '../components/InitialLoader'; // <-- ADD
 import "./globals.css";
 
@@ -95,9 +95,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <InitialLoader /> {/* <-- ADD */}
-        <ReactLenis root options={{ lerp: 0.3, duration: 1.4, smoothTouch: true }}>
-          {children}
-        </ReactLenis>
+        {children}
+        <Script src="/js/smooth-scroll.js" strategy="afterInteractive" />
       </body>
     </html>
   );
