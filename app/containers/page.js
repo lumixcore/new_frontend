@@ -528,6 +528,7 @@ export default function ContainerPlans() {
                     price={plan.price}
                     currency={plan.currency || "$"}
                     features={plan.features}
+                    url="https://panel.lumixcore.com/store/container"
                   />
                 </div>
               ))}

@@ -279,6 +279,7 @@ export default function Ipv6KvmrootServerPlansDE() {
                     currency={plan.currency || "$"}
                     billingPeriod={plan.billingPeriod}
                     features={plan.features}
+                    url="https://panel.lumixcore.com/store/ipv6-kvmserver-de"
                   />
                 </div>
               ))}

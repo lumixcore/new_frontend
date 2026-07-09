@@ -6,7 +6,8 @@ const PricingCard = ({
   features,
   currency = "$",
   extraClasses = "",
-  billingPeriod = "monthly"
+  billingPeriod = "monthly",
+  url = 'https://panel.lumixcore.com/store/'
 }) => {
   return (
     <div className={`rounded-[25px] p-7 min-h-[450px] bg-[#07111f] border border-purple-400/10 ${extraClasses}`}>
@@ -30,7 +31,7 @@ const PricingCard = ({
         ))}
       </div>
       <button className="w-full px-4 py-3 bg-[#0b1828] text-white rounded-full border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 flex items-center justify-center group"
-        onClick={() => window.location.href = 'https://panel.lumixcore.com/store/containers'}>
+        onClick={() => window.location.href = url}>
         Get plan
         <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
