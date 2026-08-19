@@ -8,7 +8,7 @@ import React from 'react';
  * Drop this as the first child inside any relative-positioned container.
  */
 const TopShade = ({
-  color = 'rgba(12, 20, 80, 0.45)',   // Core glow color
+  color = 'var(--top-shade)',           // Core glow color
   fadeColor = 'transparent',            // Outer fade color
   height = 300,                         // Fixed height in pixels
   blur = '80px',                        // Blur amount for softness

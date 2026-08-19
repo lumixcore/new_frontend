@@ -15,7 +15,7 @@ const products = [
     name: "Cloud Containers",
     description: "Easy-to-use isolated containers with zero OS overhead. Upload your code, configure, and hit deploy. Available in the US and Germany.",
     icon: SiHackthebox,
-    price: "0",
+    price: "0.65",
     currency: "$",
     bestSelling: true,
     link: "/containers"
@@ -39,13 +39,22 @@ const products = [
     link: "/kvmservers-ipv6-de"
   },
   {
-    name: "KVM Root Servers (US)",
+    name: "KVM Root Servers (US Dallas)",
     description: "Intel Xeon 2nd Gen Cascade 3.1 GHz — Full root KVM servers in Dallas, US. Super stable, lowest ping in North America.",
     icon: FiServer,
     price: "4.50",
     currency: "$",
     bestSelling: false,
-    link: "/kvmservers-us"
+    link: "/kvmservers-us-dallas"
+  },
+  {
+    name: "KVM Root Servers (US Utah)",
+    description: "Intel E5-2680v2 2.8 GHz — Full root KVM servers in Utah, US. Best for budget tight projects.",
+    icon: FiServer,
+    price: "6.50",
+    currency: "$",
+    bestSelling: false,
+    link: "/kvmservers-us-utah"
   },
   {
     name: "Game Hosting",
@@ -76,8 +85,8 @@ const ProductCard = ({ product }) => {
   return (
     <div data-aos="fade-up" data-aos-duration="700" className={`relative flex flex-col rounded-2xl p-6 transition-all duration-300 ${
       product.bestSelling
-        ? 'border-1 border-purple-500/20 bg-gradient-to-b from-[#0c133099] via-[#0c133099] to-[#071a50]'
-        : 'bg-gradient-to-b from-[#0c133099] via-[#0c133099] to-[#071230] hover:border-white/15'
+        ? 'border-1 border-purple-500/20 bg-product-card-active'
+        : 'bg-product-card hover:border-white/15'
       }`}>
       {product.bestSelling && (
         <div className="absolute -top-3 left-6 px-3 py-0.5 bg-gradient-to-r from-purple-800 to-purple-900 text-white text-[11px] font-bold rounded-full tracking-wide shadow-lg shadow-purple-500/30">

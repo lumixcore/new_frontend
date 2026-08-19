@@ -80,7 +80,7 @@ export function LogoMarquee3D() {
         className="pointer-events-none absolute inset-x-0 top-0 z-50"
         style={{
           height: 100,
-          background: 'linear-gradient(to bottom, rgba(0, 3, 19, 1) 0%, rgba(0, 3, 19, 0) 100%)',
+          background: 'linear-gradient(to bottom, var(--page) 0%, transparent 100%)',
           transform: 'translateZ(0)',
         }}
       ></div>
@@ -88,7 +88,7 @@ export function LogoMarquee3D() {
         className="pointer-events-none absolute inset-x-0 bottom-0 z-50"
         style={{
           height: 100,
-          background: 'linear-gradient(to top, rgba(0, 3, 19, 1) 0%, rgba(0, 3, 19, 0) 100%)',
+          background: 'linear-gradient(to top, var(--page) 0%, transparent 100%)',
           transform: 'translateZ(0)',
         }}
       ></div>
@@ -96,7 +96,7 @@ export function LogoMarquee3D() {
         className="pointer-events-none absolute inset-y-0 left-0 z-50"
         style={{
           width: 100,
-          background: 'linear-gradient(to right, rgba(0, 3, 19, 1) 0%, rgba(0, 3, 19, 0) 100%)',
+          background: 'linear-gradient(to right, var(--page) 0%, transparent 100%)',
           transform: 'translateZ(0)',
         }}
       ></div>
@@ -104,7 +104,7 @@ export function LogoMarquee3D() {
         className="pointer-events-none absolute inset-y-0 right-0 z-50"
         style={{
           width: 100,
-          background: 'linear-gradient(to left, rgba(0, 3, 19, 1) 0%, rgba(0, 3, 19, 0) 100%)',
+          background: 'linear-gradient(to left, var(--page) 0%, transparent 100%)',
           transform: 'translateZ(0)',
         }}
       ></div>

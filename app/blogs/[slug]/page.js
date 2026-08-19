@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }) {
     <>
       <Navbar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <main className="min-h-screen bg-[#000313] pt-24">
+      <main className="min-h-screen bg-page pt-24">
         <article className="max-w-5xl mx-auto px-6">
           <div className="rounded-2xl backdrop-blur overflow-hidden">
             <div className="aspect-video w-full overflow-hidden rounded-2xl">

@@ -1,8 +1,18 @@
 'use client';
 import { useRef, useEffect, useCallback } from 'react';
 
+/** Canvas strokeStyle cannot resolve var(), so read the computed value. */
+const resolveColor = (value) => {
+  if (typeof value !== 'string' || !value.startsWith('var(')) return value;
+  const name = value.slice(4, -1).trim();
+  const resolved = getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+  return resolved || '#8b5cf6';
+};
+
 const ClickSpark = ({
-  sparkColor = '#fff',
+  sparkColor = 'var(--accent-violet)',
   sparkSize = 10,
   sparkRadius = 15,
   sparkCount = 8,
@@ -66,6 +76,7 @@ const ClickSpark = ({
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
+    const strokeColor = resolveColor(sparkColor);
     let animationId;
 
     const draw = timestamp => {
@@ -91,7 +102,7 @@ const ClickSpark = ({
         const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
         const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
 
-        ctx.strokeStyle = sparkColor;
+        ctx.strokeStyle = strokeColor;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(x1, y1);

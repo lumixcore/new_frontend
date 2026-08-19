@@ -10,7 +10,7 @@ const PricingCard = ({
   url = 'https://panel.lumixcore.com/store/'
 }) => {
   return (
-    <div className={`rounded-[25px] p-7 min-h-[450px] bg-[#07111f] border border-purple-400/10 ${extraClasses}`}>
+    <div className={`rounded-[25px] p-7 min-h-[450px] bg-surface border border-purple-400/10 ${extraClasses}`}>
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-lg text-white font-semibold">{planName}</h3>
       </div>
@@ -30,7 +30,7 @@ const PricingCard = ({
           </div>
         ))}
       </div>
-      <button className="w-full px-4 py-3 bg-[#0b1828] text-white rounded-full border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 flex items-center justify-center group"
+      <button className="w-full px-4 py-3 bg-surface-elevated text-white rounded-full border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 flex items-center justify-center group"
         onClick={() => window.location.href = url}>
         Get plan
         <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

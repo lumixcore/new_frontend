@@ -25,7 +25,7 @@ export default function TOS() {
         <h2>1. Introduction</h2>
         <p>LumixCore is an independent project operated by an individual. It is not a registered company. By accessing or using any LumixCore 
             services, website, panel, Discord server, or related resources, you acknowledge that you have read, understood, and agree 
-            to these Terms of Service & <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>Privacy Policy</a>. 
+            to these Terms of Service & <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-accent-cyan hover:underline">Privacy Policy</a>. 
             If you do not agree with any part of these terms, please do not use the services.</p>
 
 

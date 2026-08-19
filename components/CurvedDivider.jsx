@@ -8,7 +8,7 @@ import React from 'react';
  * Stack multiple curves with the `lines` prop.
  */
 const CurvedDivider = ({
-  color = '#ffffff',
+  color = 'var(--accent-violet)',
   opacity = 0.2,
   strokeWidth = 1,
   curveDepth = 20,

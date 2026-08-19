@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="relative w-full mt-20 overflow-hidden border-t border-white/10 bg-[#00051b]">
+    <footer className="relative w-full mt-20 overflow-hidden border-t border-white/10 bg-footer">
       <div
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            'radial-gradient(1000px 400px at 20% 0%, rgba(99,102,241,0.20) 0%, rgba(0,0,0,0) 60%), radial-gradient(900px 350px at 80% 0%, rgba(168,85,247,0.14) 0%, rgba(0,0,0,0) 60%)',
+            'radial-gradient(1000px 400px at 20% 0%, color-mix(in oklab, var(--accent-violet) 20%, transparent) 0%, transparent 60%), radial-gradient(900px 350px at 80% 0%, color-mix(in oklab, var(--accent-cyan) 12%, transparent) 0%, transparent 60%)',
         }}
       ></div>
 
-      <div className="relative z-10 max-w-[81rem] mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-[82rem] mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
@@ -58,7 +58,8 @@ const Footer = () => {
                   <a href="/containers" className="text-gray-400 hover:text-white transition-colors">Cloud Containers</a>
                   <a href="/webhosting" className="text-gray-400 hover:text-white transition-colors">Web Hosting</a>
                   <a href="/gameserver" className="text-gray-400 hover:text-white transition-colors">Game Hosting</a>
-                  <a href="/kvmservers-us" className="text-gray-400 hover:text-white transition-colors">KVM Servers (US)</a>
+                  <a href="/kvmservers-us-dallas" className="text-gray-400 hover:text-white transition-colors">KVM Servers (US Dallas)</a>
+                  <a href="/kvmservers-us-utah" className="text-gray-400 hover:text-white transition-colors">KVM Servers (US Utah)</a>
                   <a href="/kvmservers-de" className="text-gray-400 hover:text-white transition-colors">KVM Servers (Germany)</a>
                   <a href="/kvmservers-ipv6-de" className="text-gray-400 hover:text-white transition-colors">IPv6 KVM (Germany)</a>
                 </div>

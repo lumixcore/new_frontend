@@ -9,7 +9,7 @@ export function FAQItem({ question, answer, isOpen, onToggle }) {
   useEffect(() => {AOS.init();}, []);
   return (
     <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="250" data-aos-offset="0">
-      <div className="border border-white/5 rounded-xl overflow-hidden bg-[#090d22] transition-all duration-300 hover:bg-[#0b1029] cursor-pointer">
+      <div className="border border-white/5 rounded-xl overflow-hidden bg-surface transition-all duration-300 hover:bg-surface-elevated cursor-pointer">
         <button
           onClick={onToggle}
           className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 transition-colors duration-200 cursor-pointer"

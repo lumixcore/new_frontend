@@ -43,8 +43,38 @@
   --radius-xl: calc(var(--radius) + 4px);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  
-  
+
+  /* ── Lumixcore brand ──────────────────────────────────────────────
+     Single source of truth. Edit :root below; nothing else to sync.
+     Utilities: bg-night-800, bg-page, text-content-muted, text-accent … */
+
+  /* Surface ramp */
+  --color-night-950: var(--night-950);
+  --color-night-900: var(--night-900);
+  --color-night-800: var(--night-800);
+  --color-night-700: var(--night-700);
+  --color-night-600: var(--night-600);
+  --color-night-border: var(--night-border);
+
+  /* Semantic surface aliases */
+  --color-page: var(--page);
+  --color-footer: var(--footer);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+
+  /* Accents */
+  --color-accent-violet: var(--accent-violet);
+  --color-accent-cyan: var(--accent-cyan);
+
+  /* Content */
+  --color-content: var(--content);
+  --color-content-secondary: var(--content-secondary);
+  --color-content-muted: var(--content-muted);
+
+  /* Fixed external brand marks */
+  --color-paypal: var(--paypal);
+  --color-bitcoin: var(--bitcoin);
+
   @keyframes marquee {
   from {
     transform: translateX(0);
@@ -65,6 +95,42 @@
 
 :root {
   --radius: 0.625rem;
+
+  /* ═══ Lumixcore brand — the only colors defined in this project ═══
+     13 values. Everything else is derived from them with color-mix(),
+     so opacities and glows never need their own tokens. */
+
+  /* Surface ramp, darkest to lightest */
+  --night-950: #000313;
+  --night-900: #05081a;
+  --night-800: #0b0d1c;
+  --night-700: #111425;
+  --night-600: #171c32;
+  --night-border: #1a1e38;
+
+  /* Accents — one violet, one cyan */
+  --accent-violet: #8b5cf6;
+  --accent-cyan: #22d3ee;
+
+  /* Content */
+  --content: #e1dff5;
+  --content-secondary: #949dcc;
+  --content-muted: #5962a0;
+
+  /* Fixed external brand marks */
+  --paypal: #009cde;
+  --bitcoin: #f7931a;
+
+  /* Semantic aliases → ramp (rename surfaces here, not at call sites) */
+  --page: var(--night-950);
+  --footer: var(--night-900);
+  --surface: var(--night-800);
+  --surface-elevated: var(--night-700);
+
+  /* Composed: section top glow, passed as a prop by product pages */
+  --top-shade: color-mix(in oklab, var(--accent-violet) 24%, transparent);
+
+  /* ─── shadcn/ui token contract (separate system, leave as-is) ─── */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -158,6 +224,81 @@
   .animate-scroll:hover {
     animation-play-state: paused;
   }
+
+  @keyframes aurora-drift {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) scale(1);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translate3d(-3%, 4%, 0) scale(1.08);
+      opacity: 0.75;
+    }
+  }
+
+  .animate-aurora {
+    animation: aurora-drift 18s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-aurora {
+      animation: none;
+    }
+  }
+
+  .bg-feature-card {
+    background-image: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--accent-violet) 14%, var(--night-700)),
+      color-mix(in oklab, var(--accent-violet) 5%, var(--night-800)),
+      var(--night-950)
+    );
+  }
+
+  .bg-feature-card-br {
+    background-image: linear-gradient(
+      to bottom right,
+      color-mix(in oklab, var(--accent-violet) 14%, var(--night-700)),
+      color-mix(in oklab, var(--accent-violet) 5%, var(--night-800)),
+      var(--night-950)
+    );
+  }
+
+  .bg-product-card {
+    background-image: linear-gradient(
+      to bottom,
+      var(--night-800),
+      var(--night-800),
+      color-mix(in oklab, var(--accent-violet) 10%, var(--night-800))
+    );
+  }
+
+  .bg-product-card-active {
+    background-image: linear-gradient(
+      to bottom,
+      var(--night-800),
+      var(--night-800),
+      color-mix(in oklab, var(--accent-violet) 24%, var(--night-800))
+    );
+  }
+
+  .gradient-border-purple {
+    background:
+      linear-gradient(color-mix(in oklab, var(--accent-violet) 18%, transparent), transparent) padding-box,
+      linear-gradient(color-mix(in oklab, var(--accent-violet) 50%, transparent), transparent) border-box;
+  }
+
+  .gradient-border-purple-soft {
+    background:
+      linear-gradient(color-mix(in oklab, var(--accent-violet) 12%, transparent), transparent) padding-box,
+      linear-gradient(to bottom, color-mix(in oklab, var(--accent-violet) 40%, transparent), transparent) border-box;
+  }
+
+  .gradient-border-purple-softer {
+    background:
+      linear-gradient(color-mix(in oklab, var(--accent-violet) 8%, transparent), transparent) padding-box,
+      linear-gradient(to bottom, color-mix(in oklab, var(--accent-violet) 30%, transparent), transparent) border-box;
+  }
 }
 
 /* Custom scrollbar styles - must be outside @layer utilities */
@@ -166,42 +307,39 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #281c5a;
+  background-color: var(--night-600);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #281c5a;
+  background-color: var(--night-600);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #000313;
+  background-color: var(--night-950);
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #000313;
+  background-color: var(--night-950);
 }
 
 /* Firefox scrollbar styles */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #281c5a #000313;
+  scrollbar-color: var(--night-600) var(--night-950);
 }
-
-
-
-
-
-
-
 
 .purple-glow-card {
   position: relative;
   border-radius: 1rem;
   padding: 1.5rem;
-  background: linear-gradient(165deg,#09123499, #09123499,#16307399);
+  background: linear-gradient(
+    165deg,
+    color-mix(in oklab, var(--accent-violet) 6%, var(--night-800)),
+    color-mix(in oklab, var(--accent-violet) 6%, var(--night-800)),
+    color-mix(in oklab, var(--accent-violet) 18%, var(--night-800))
+  );
   overflow: hidden;
-  /* border: 1px solid #3d1466; */
 }
 
 .purple-glow-card::before,
@@ -211,12 +349,11 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(to right, #0000, #1e093200, #b56aff, #0000, #0000);
+  background: linear-gradient(to right, transparent, transparent, var(--accent-violet), transparent, transparent);
 }
 
 .purple-glow-card::before {
-  /* top: 0; */
-  display: none; 
+  display: none;
 }
 
 .purple-glow-card::after {

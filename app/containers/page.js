@@ -37,20 +37,6 @@ export default function ContainerPlans() {
 
   const containerPlans = [
     {
-      planName: "Cloud Container Free",
-      price: "0",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "40%" },
-        { resource: "RAM", value: "512MB" },
-        { resource: "Storage", value: "1GB NVMe" },
-        { resource: "Ports", value: "1 included" },
-        { resource: "Backups", value: "Not included" },
-        { resource: "Databases", value: "Not included" },
-        { resource: "Subdomain", value: "Not included" }
-      ]
-    },
-    {
       planName: "Cloud Container Nano",
       price: "0.65",
       currency: "$",
@@ -192,130 +178,11 @@ export default function ContainerPlans() {
     }
   ];
 
-  const dedicatedPlansDallas = [
-    {
-      planName: "Dedicated Dallas Base",
-      price: "4.5",
-      currency: "$",
-      billingPeriod: "quarterly",
-      features: [
-        { resource: "CPU", value: "2 Dedicated Core" },
-        { resource: "RAM", value: "4GB" },
-        { resource: "Storage", value: "30GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Dallas Medium",
-      price: "8",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "4 Dedicated Cores" },
-        { resource: "RAM", value: "10GB" },
-        { resource: "Storage", value: "70GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Dallas Large",
-      price: "10",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "4 Dedicated Cores" },
-        { resource: "RAM", value: "14GB" },
-        { resource: "Storage", value: "90GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Dallas XL",
-      price: "18.20",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "6 Dedicated Cores" },
-        { resource: "RAM", value: "24GB" },
-        { resource: "Storage", value: "140GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    }
-  ];
-
-  const dedicatedPlansFrankfurt = [
-    {
-      planName: "Dedicated Frankfurt Base",
-      price: "4.30",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "1 Dedicated Core" },
-        { resource: "RAM", value: "6GB" },
-        { resource: "Storage", value: "30GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Frankfurt Medium",
-      price: "6.50",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "2 Dedicated Cores" },
-        { resource: "RAM", value: "8GB" },
-        { resource: "Storage", value: "40GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Frankfurt Large",
-      price: "7.65",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "4 Dedicated Cores" },
-        { resource: "RAM", value: "12GB" },
-        { resource: "Storage", value: "90GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    },
-    {
-      planName: "Dedicated Frankfurt XL",
-      price: "10.50",
-      currency: "$",
-      features: [
-        { resource: "CPU", value: "4 Dedicated Cores" },
-        { resource: "RAM", value: "16GB" },
-        { resource: "Storage", value: "130GB NVMe" },
-        { resource: "IPv4", value: "1 Dedicated" },
-        { resource: "Ports", value: "Unlimited" },
-        { resource: "Backups", value: "Unlimited" },
-        { resource: "Databases", value: "Unlimited" }
-      ]
-    }
-  ];
-
   return (
-    <ClickSpark sparkColor='#b095ffff' sparkSize={10} sparkRadius={17} sparkCount={6} duration={400}>
+    <ClickSpark sparkSize={10} sparkRadius={17} sparkCount={6} duration={400}>
       <Navbar />
-      <div className="bg-[#000313] overflow-hidden">
-        <TopShade color="rgba(20, 35, 100, 0.9)" blur="30px" height={400} />
+      <div className="bg-page overflow-hidden">
+        <TopShade color="var(--top-shade)" blur="30px" height={400} />
 
         {/* Hero Section */}
         <div className="flex flex-col max-w-6xl mx-auto mt-40 mb-5 p-5 w-full">
@@ -324,7 +191,7 @@ export default function ContainerPlans() {
               Cloud Containers
             </h1>
             <p className={`text-lg text-gray-400 mb-1 max-w-3xl text-left md:text-center`} style={{marginTop: '-10px'}} data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-              Host absolutely anything the simplest way possible using our cloud containers. No OS hassle, just configure and hit run. Powered by <span className="text-cyan-500">Intel Xeon processors.</span> Available in 2 locations with NVMe storage and more. Try for free. Paid plans start at <span className="text-cyan-300">$0.65</span> per month.
+              Host absolutely anything the simplest way possible using our cloud containers. No OS hassle, just configure and hit run. Powered by <span className="text-cyan-500">Intel Xeon processors.</span> Available in 2 locations with NVMe storage and more. Plans start at <span className="text-cyan-300">$0.65</span> per month.
             </p>
             <a
               className="text-cyan-400 no-underline hover:opacity-90 text-sm font-medium cursor-pointer mb-8"
@@ -342,7 +209,7 @@ export default function ContainerPlans() {
               What are cloud containers?
             </a>
           </div>
-          <div className={`grid grid-cols-1 min-[570px]:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl mx-auto`} data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+          <div className={`flex justify-center w-full max-w-4xl mx-auto`} data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
             <button className="flex items-center justify-center group px-8 py-3 bg-linear-to-b from-purple-600 to-purple-900 text-white rounded-full hover:opacity-90 transition-all shadow-lg shadow-purple-800/50" onClick={() => {
               const productsSection = document.getElementById('pricing-section');
               const offset = 80;
@@ -351,30 +218,6 @@ export default function ContainerPlans() {
               window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }}>
               Standard pricing
-              <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-            <button className="px-8 py-3 text-white bg-[#0b1828] rounded-full transition-all border border-cyan-500/20 hover:border-cyan-500/40 flex items-center justify-center group" onClick={() => {
-              const productsSection = document.getElementById('dedicated');
-              const offset = 80;
-              const elementPosition = productsSection.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }}>
-              Dedicated pricing (US)
-              <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-            <button className="px-8 py-3 text-white bg-[#0b1828] rounded-full transition-all border border-cyan-500/20 hover:border-cyan-500/40 flex items-center justify-center group" onClick={() => {
-              const productsSection = document.getElementById('dedicatedEU');
-              const offset = 80;
-              const elementPosition = productsSection.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }}>
-              Dedicated pricing (EU)
               <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
               </svg>
@@ -417,12 +260,11 @@ export default function ContainerPlans() {
         </div>
 
         {/* Colored, slightly thicker */}
-        <CurvedDivider 
-          lines={5} 
-          lineGap={70} 
-          color="#6263B5" 
-          opacity={0.2} 
-          strokeWidth={2} 
+        <CurvedDivider
+          lines={5}
+          lineGap={70}
+          opacity={0.2}
+          strokeWidth={2}
           curveDepth={50}
         />
 
@@ -436,11 +278,11 @@ export default function ContainerPlans() {
                 <span className="text-gray-300 text-xs">Card</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/8">
-                <svg className="w-4 h-4 text-[#009cde]" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
+                <svg className="w-4 h-4 text-paypal" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
                 <span className="text-gray-300 text-xs">PayPal</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/8">
-                <svg className="w-4 h-4 text-[#f7931a]" viewBox="0 0 24 24" fill="currentColor"><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/></svg>
+                <svg className="w-4 h-4 text-bitcoin" viewBox="0 0 24 24" fill="currentColor"><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/></svg>
                 <span className="text-gray-300 text-xs">Crypto</span>
               </div>
             </div>
@@ -451,9 +293,8 @@ export default function ContainerPlans() {
         <div className="w-full mt-30 overflow-hidden rounded-t-[40px]" id="pricing-section">
           <div className={`max-w-[85rem] mx-auto px-6`}>
             <div className="text-left mb-10 pt-2">
-              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2"
+              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2 gradient-border-purple"
                 style={{
-                  background: 'linear-gradient(rgb(13, 31, 108, 0.4), rgba(0, 0, 0, 0)) padding-box, linear-gradient(rgba(168, 85, 247, 0.5), transparent) border-box',
                   border: '1px solid transparent',
                 }} data-aos="fade-up" data-aos-duration="700">
                 Plans
@@ -476,76 +317,14 @@ export default function ContainerPlans() {
           </div>
         </div>
 
-        {/* Dedicated Dallas Pricing Section */}
-        <div className="w-full mt-20 overflow-hidden rounded-t-[40px]" id='dedicated'>
-          <div className={`max-w-[85rem] mx-auto px-6`}>
-            <div className="text-left mb-10 pt-2">
-              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2"
-                style={{
-                  background: 'linear-gradient(rgb(13, 31, 108, 0.4), rgba(0, 0, 0, 0)) padding-box, linear-gradient(rgba(168, 85, 247, 0.5), transparent) border-box',
-                  border: '1px solid transparent',
-                }} data-aos="fade-up" data-aos-duration="700">
-                Dallas, US
-              </span>
-              <h2 className="text-3xl text-white mb-1 mt-5" style={{fontFamily: 'Nohemi, sans-serif', fontWeight: '300'}}>Dedicated cloud container pricing</h2>
-              <p className="text-sm text-gray-400 leading-6 max-w-xl">3.1 GHz Intel Xeon 2nd Gen Cascade Lake, dedicated resources, dedicated IPv4 address, NVMe drives, DDoS protection, SFTP access and 24/7 support. Hosted in Dallas, US. Delivered within 24 hours.</p>
-            </div>
-            <div className="grid grid-cols-1 min-[570px]:grid-cols-2 min-[830px]:grid-cols-3 xl:grid-cols-4 gap-5 justify-items-center">
-              {dedicatedPlansDallas.map((plan, index) => (
-                <div key={index} className="w-full min-[570px]:max-w-sm mb-5">
-                  <PricingCard
-                    planName={plan.planName}
-                    price={plan.price}
-                    currency={plan.currency || "$"}
-                    features={plan.features}
-                    billingPeriod={plan.billingPeriod}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Dedicated Frankfurt Pricing Section */}
-        <div className="w-full mt-20 overflow-hidden rounded-t-[40px]" id='dedicatedEU'>
-          <div className={`max-w-[85rem] mx-auto px-6`}>
-            <div className="text-left mb-10 pt-2">
-              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2"
-                style={{
-                  background: 'linear-gradient(rgb(13, 31, 108, 0.4), rgba(0, 0, 0, 0)) padding-box, linear-gradient(rgba(168, 85, 247, 0.5), transparent) border-box',
-                  border: '1px solid transparent',
-                }} data-aos="fade-up" data-aos-duration="700">
-                Frankfurt, Germany
-              </span>
-              <h2 className="text-3xl text-white mb-1 mt-5" style={{fontFamily: 'Nohemi, sans-serif', fontWeight: '300'}}>Dedicated cloud container pricing</h2>
-              <p className="text-sm text-gray-400 leading-6 max-w-xl">2.7Ghz Intel Xeon 6150, dedicated resources, dedicated IPv4 address, NVMe drives, 3.2 Tbit DDoS protection, SFTP access and 24/7 support. Hosted in Frankfurt, Germany. Delivered within 24 hours.</p>
-            </div>
-            <div className="grid grid-cols-1 min-[570px]:grid-cols-2 min-[830px]:grid-cols-3 xl:grid-cols-4 gap-5 justify-items-center">
-              {dedicatedPlansFrankfurt.map((plan, index) => (
-                <div key={index} className="w-full min-[570px]:max-w-sm mb-5">
-                  <PricingCard 
-                    planName={plan.planName}
-                    price={plan.price}
-                    currency={plan.currency || "$"}
-                    features={plan.features}
-                    url="https://panel.lumixcore.com/store/container"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
         {/* What are cloud containers? */}
         <section id="what-are-cloud-containers" className="mt-30 px-6">
           <div className="max-w-7xl mx-auto">
 
             {/* Header */}
             <div className="max-w-2xl mb-10">
-              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2"
+              <span className="text-cyan-500 text-sm p-2 px-5 rounded-full bg-linear-to-t from-transparent to-purple-500/20 relative font-semibold mb-2 gradient-border-purple"
                 style={{
-                  background: 'linear-gradient(rgb(13, 31, 108, 0.4), rgba(0, 0, 0, 0)) padding-box, linear-gradient(rgba(168, 85, 247, 0.5), transparent) border-box',
                   border: '1px solid transparent',
                 }} data-aos="fade-up" data-aos-duration="700">
                 What is this?
@@ -667,7 +446,7 @@ export default function ContainerPlans() {
                 onClick={() => window.location.href = 'https://panel.lumixcore.com/auth/register'}
                 className="shrink-0 px-6 py-2.5 text-sm text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-colors font-medium"
               >
-                Try it free →
+                Get started →
               </button>
             </div>
 

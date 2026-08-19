@@ -35,7 +35,7 @@ export default function BlogsPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#000313] pt-24 relative overflow-hidden">
+      <main className="min-h-screen bg-page pt-24 relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0 opacity-70"
           style={{

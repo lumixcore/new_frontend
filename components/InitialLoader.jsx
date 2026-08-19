@@ -25,7 +25,7 @@ export default function InitialLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-[#000313] flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+      className={`fixed inset-0 z-[9999] bg-page flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
         done ? 'opacity-0 pointer-events-none scale-105' : 'opacity-100 scale-100'
       }`}
     >

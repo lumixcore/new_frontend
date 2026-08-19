@@ -15,9 +15,10 @@ const Navbar = () => {
     { name: 'Cloud containers', link: '/containers', delay: 100 },
     { name: 'Web Hosting', link: '/webhosting', delay: 150 },
     { name: 'Game Hosting', link: '/gameserver', delay: 200 },
-    { name: 'KVM Servers (US)', link: '/kvmservers-us', delay: 250 },
-    { name: 'KVM Servers (Germany)', link: '/kvmservers-de', delay: 300 },
-    { name: 'IPv6 KVM Servers (Germany)', link: '/kvmservers-ipv6-de', delay: 350 },
+    { name: 'KVM Servers (US Dallas)', link: '/kvmservers-us-dallas', delay: 250 },
+    { name: 'KVM Servers (US Utah)', link: '/kvmservers-us-utah', delay: 300 },
+    { name: 'KVM Servers (Germany)', link: '/kvmservers-de', delay: 350 },
+    { name: 'IPv6 KVM Servers (Germany)', link: '/kvmservers-ipv6-de', delay: 400 },
   ];
 
   const navOptions = [
@@ -76,10 +77,16 @@ const Navbar = () => {
           transform: translateY(0);
         }
 
+        /* Entrance stagger is scoped to opacity/transform via --dt-delay so the
+           hover fade on color/background stays instant. */
         .dt-item {
           opacity: 0;
           transform: translateX(-20px);
-          transition: opacity 400ms ease, transform 400ms ease;
+          transition:
+            opacity 400ms ease var(--dt-delay, 0ms),
+            transform 400ms ease var(--dt-delay, 0ms),
+            color 200ms ease,
+            background-color 200ms ease;
         }
         .dt-item.show {
           opacity: 1;
@@ -234,12 +241,12 @@ const Navbar = () => {
                 </button>
                 {/* Dropdown Menu */}
                 <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-3 transition-all duration-200 ${isProductsDropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
-                  <div className={`bg-[#0b1025] py-[9px] rounded-lg border border-white/5 shadow-xl min-w-[220px] dt-enter ${isProductsDropdownOpen ? 'show' : ''}`}>
+                  <div className={`bg-surface-elevated py-[9px] rounded-lg border border-white/5 shadow-xl min-w-[220px] dt-enter ${isProductsDropdownOpen ? 'show' : ''}`}>
                     {productsOptions.map((option, index) => (
                       <a
                         key={index}
                         href={option.link}
-                        style={{ transitionDelay: isProductsDropdownOpen ? `${option.delay}ms` : '0ms' }}
+                        style={{ '--dt-delay': isProductsDropdownOpen ? `${option.delay}ms` : '0ms' }}
                         className={`flex items-center px-4 py-[11px] text-gray-300 font-semibold hover:text-white hover:bg-white/5 transition-all duration-300 text-[13px] dt-item ${isProductsDropdownOpen ? 'show' : ''}`}
                       >
                         {option.name}
@@ -318,7 +325,7 @@ const Navbar = () => {
       <div className={`fixed inset-0 z-40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         {/* Backdrop */}
         <div 
-          className="absolute inset-0 bg-[#00041a]" 
+          className="absolute inset-0 bg-night-900" 
           onClick={closeMobileMenu}
         />
         {/* Menu Content */}

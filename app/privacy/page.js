@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           <li><strong>Payment information:</strong> Only cryptocurrency transaction addresses for payment verification.</li>
           <li><strong>Anti-Abuse Monitoring:</strong> Temporary monitoring of server activity, including console logs, 
           installed packages, CPU, RAM, disk, and network usage, and detection of suspicious file names (e.g., ddos.py, flood.py). 
-          This data is not stored and is used only to enforce the Terms of Service and <a href="/tos#fair-use-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>Fair Use Policy</a></li>
+          This data is not stored and is used only to enforce the Terms of Service and <a href="/tos#fair-use-policy" target="_blank" rel="noopener noreferrer" className="text-accent-cyan hover:underline">Fair Use Policy</a></li>
           <li>We <strong>do not</strong> collect cookies or tracking data.</li>
         </ul>
 
